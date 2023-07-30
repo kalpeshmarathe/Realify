@@ -49,25 +49,13 @@ def get_second_part(string, delimiter):
         return None
 
 
-cap = cv2.VideoCapture(0)  # For Webcam
-cap.set(3, 1280)
-cap.set(4, 720)
-# cap = cv2.VideoCapture("../Videos/motorbikes.mp4")  # For Video
+
+ cap = cv2.VideoCapture("../Videos/motorbikes.mp4")  # For Video (give video Path)
 
 
 model = YOLO("../Yolo-Weights/yolov8l.pt")
 
-classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
-              "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
-              "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella",
-              "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat",
-              "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup",
-              "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli",
-              "carrot", "hot dog", "pizza", "donut", "cake", "chair", "sofa", "pottedplant", "bed",
-              "diningtable", "toilet", "tvmonitor", "laptop", "mouse", "remote", "keyboard", "cell phone",
-              "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors",
-              "teddy bear", "hair drier", "toothbrush"
-              ]
+
 
 prev_frame_time = 0
 new_frame_time = 0
